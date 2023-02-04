@@ -1,4 +1,4 @@
-package com.rabbitmq.entity;
+package com.consumer.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,2 +1,16 @@
-package com.consumer.listener;public class MessageListener {
+package com.consumer.listener;
+
+import com.consumer.config.MQConfig;
+import com.consumer.entity.CustomMessage;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MessageListener {
+
+    @RabbitListener(queues = MQConfig.QUEUE)
+    public void listener(CustomMessage message) {
+        System.out.println(message);
+    }
+
 }
